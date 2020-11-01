@@ -1,0 +1,68 @@
+<apex:page standardController="Customer__c"   applyBodyTag="false" >
+    <apex:form style="text-align:center">
+            <div>
+                <h1>
+                    KloudeOne
+                </h1>
+                <p style="text-size:30px">
+                    1730 Brandywood Way, El Dorado Hills, CA 95762, United States
+                </p>
+                
+                <h1 style="text-align:center">
+                    Invoice
+                </h1>
+        </div>
+        <apex:pageBlock title="Customer Information">
+            <apex:pageBlockSection >
+             
+              <div>
+                   <h3>
+                       Custome Name:   
+                  </h3> 
+                  <apex:outputField label="" value="{! Customer__c.Name }"/>
+                  </div>
+                
+                <div>
+                    <h3>
+                        Address :
+                    </h3>
+                <apex:outputField label="" value="{! Customer__c.Address__c }"/>
+                          </div>
+                <div>
+                    <h3>
+                        Email :
+                    </h3>
+              
+                <apex:outputField label="" value="{! Customer__c.Email__c }"/>
+             </div>
+                </apex:pageBlockSection>
+        </apex:pageBlock>
+
+        <apex:pageBlock title="Product Details">
+            <apex:pageBlockSection >
+                <apex:outputField label="PRODUCT NAME :" value="{! Customer__c.Product_Name__c }"/>
+                <apex:outputField label="PRODUCT COST :" value="{! Customer__c.Product_Cost__c}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+
+        <apex:pageBlock title="Delivery Details">
+            <apex:pageBlockSection >
+                <apex:outputField label="DRIVER NAME :" value="{! Customer__c.Driver_Name__c }"/>
+                <apex:outputField label="DRIVER CHARGE :" value="{! Customer__c.Delivery_Charge__c }"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+
+        <apex:pageBlock title="Payment Details">
+            <apex:pageBlockSection >
+                <apex:outputField label="PRODUCT COST :" value="{! Customer__c.Product_Cost__c}"/>
+                <apex:outputField label="DELIVERY CHARGE :" value="{! Customer__c.Delivery_Charge__c }"/>
+                <apex:outputField label="TOTAL COST :" value="{! Customer__c.Total_Cost__c }"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+            
+             <h1>
+                 Thank You
+        </h1>
+
+    </apex:form>
+</apex:page>
